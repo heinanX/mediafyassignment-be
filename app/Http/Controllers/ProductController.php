@@ -20,6 +20,7 @@ class ProductController extends Controller
         try {
             // fetch products
             $products = Product::where('status', 1)
+                ->where('visibility', 1)
                 ->paginate($request->integer('page_size', 10));
 
             // return products

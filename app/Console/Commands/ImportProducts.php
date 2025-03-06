@@ -52,7 +52,7 @@ class ImportProducts extends Command
                         'name' => $csvRow[2], // name
                         'qty' => $csvRow[3], // qty
                         'status' => $csvRow[4], // status
-                        'visibility' => $csvRow[5], // visibility
+                        'visibility' => trim($csvRow[5]) === 'true' ? 1 : 0, // visibility
                         'price' => $csvRow[6], // price
                         'type_id' => $csvRow[7], // type_id - simple products for now only
                         'description' => $csvRow[8], // description
