@@ -21,11 +21,9 @@ to control pagination. This endpoint is used to obtain imported products, to be 
 Application has been working well initially, but over time we've noticed a couple of problems with it.
 Problems are described below.
 
-1. Products that have visibility disabled, i.e. `visibility=false` in the database are also displayed on the
-   frontend. We don't know why. Can you help?
+1. Products that have visibility disabled, i.e. `visibility=false` in the database are also displayed on the frontend. We don't know why. Can you help?
 
-2. For some unknown reason, our database gets filled with products without a name. Can you find the cause for this
-   behaviour? We don't want to have products without a name in the DB.
+2. For some unknown reason, our database gets filled with products without a name. Can you find the cause for this behaviour? We don't want to have products without a name in the DB.
 
 3. During the import, we notice a huge spike in number of SQL queries being done to the database. Over time, we've been
    getting new products (import file has grown significantly), and import has been running longer and longer. Do you

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('feed_product_id')->nullable(false);
             $table->string('sku')->nullable(false);
-            $table->string('name')->nullable(true);
+            $table->string('name')->nullable(false);
             $table->integer('qty')->nullable(false)->default(0);
             $table->integer('status')->nullable(false)->default(0);
             $table->boolean('visibility')->nullable(false);
