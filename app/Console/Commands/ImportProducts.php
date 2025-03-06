@@ -35,7 +35,7 @@ class ImportProducts extends Command
     {
         try {
             $skipHeader = true;
-            $importFile = Storage::disk('public')->path('') . self::IMPORT_FILE_NAME;
+            $importFile = public_path(self::IMPORT_FILE_NAME);
             $file_handle = fopen($importFile, 'r');
             while ($csvRow = fgetcsv($file_handle, null, ';')) {
                 if ($skipHeader) {
